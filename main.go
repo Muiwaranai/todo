@@ -11,6 +11,9 @@ func main() {
 
 	r := http.NewServeMux()
 	s := server.NewServerL(*databse)
+
+	r.Handle("/static/", http.StripPrefix("/static/", http.FileServer(http.Dir("static"))))
+
 	r.HandleFunc("/", s.Greetings)
 	r.HandleFunc("/api/getall/", s.GetAllTasks)
 	r.HandleFunc("/api/addtask", s.AddTask)
