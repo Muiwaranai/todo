@@ -1,32 +1,7 @@
 [
   {
-    "id": 1,
-    "name": "Say hello",
-    "value": "XDD"
-  },
-  {
-    "id": 3,
-    "name": "qwe",
-    "value": "qwe"
-  },
-  {
-    "id": 4,
-    "name": "xadadasd",
-    "value": "asdasdasdas"
-  },
-  {
-    "id": 5,
-    "name": "qweqweqweqweqweqweqweqweq",
-    "value": "XDD"
-  },
-  {
-    "id": 6,
-    "name": "qweqweqweqweqweqweqweqweq",
-    "value": "XDD"
-  },
-  {
-    "id": 7,
-    "name": "37",
-    "value": "Nope"
+    "Id": 1,
+    "Title": "Default",
+    "Description": "Default Description"
   }
 ]
