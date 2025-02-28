@@ -1,4 +1,4 @@
-package jsondatabase
+package data
 
 type ToDoTaskDTO struct {
 	Title       string `json:"name"`

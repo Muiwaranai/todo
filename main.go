@@ -2,19 +2,16 @@ package main
 
 import (
 	"net/http"
-	"todo/endpoints"
-	"todo/jsondatabase"
+	"todo/data"
+	"todo/server"
 )
 
 func main() {
-	databse := jsondatabase.NewJsonDB("jsondatabase/db.json")
+	databse := data.NewDatabase("database/database.json")
 
 	r := http.NewServeMux()
-	r.HandleFunc("/", endpoints.Greetings)
-	r.HandleFunc("/api/add", endpoints.Addtask)
-	// r.HandleFunc("/", modules.Greetings)
-	// r.HandleFunc("/", modules.Greetings)
-	// r.HandleFunc("/", modules.Greetings)
+	s := server.NewServerL(*databse)
+	r.HandleFunc("/", s.Greetings)
 
 	http.ListenAndServe(":8080", r)
 }

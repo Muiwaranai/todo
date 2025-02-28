@@ -1,4 +1,4 @@
-package jsondatabase
+package data
 
 type ToDoTask struct {
 	Id          int    `json:"id"`
